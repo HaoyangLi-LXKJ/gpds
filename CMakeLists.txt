@@ -6,9 +6,9 @@ project(gpds
 )
 
 # Lets have some options! \o/
-option(GPDS_BUILD_TESTS    "Build the unit tests." on)
-option(GPDS_BUILD_EXAMPLES "Build the examples." on)
-option(GPDS_FEATURE_SPDLOG "Enable spdlog sink feature." on)
+option(GPDS_BUILD_TESTS    "Build the unit tests." off)
+option(GPDS_BUILD_EXAMPLES "Build the examples." off)
+option(GPDS_FEATURE_SPDLOG "Enable spdlog sink feature." off)
 
 # User settings
 set(CMAKE_DEBUG_POSTFIX d)

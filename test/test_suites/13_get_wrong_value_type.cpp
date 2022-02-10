@@ -1,13 +1,6 @@
-#include "../test.h"
-#include "gpds/container.hpp"
+#include "../test.hpp"
 
-TEST_CASE("retrieving wrong type from value throws an exception")
-{
-    gpds::value value("1234");
-    REQUIRE_THROWS_AS([[maybe_unused]] int foo = value.get<int>(), std::bad_variant_access);
-}
-
-TEST_CASE("retrieving wronge type from container")
+TEST_CASE("retrieving wrong type from container")
 {
     gpds::container container;
 

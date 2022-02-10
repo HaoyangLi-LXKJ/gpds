@@ -1,6 +1,6 @@
 # Set project information
 project(gpds
-	VERSION 1.1.0
+	VERSION 1.3.0
 	LANGUAGES CXX
 	HOMEPAGE_URL "https://gpds.simulton.com"
 )
@@ -34,6 +34,13 @@ set(HEADERS_PUBLIC
 	include/gpds/utils.hpp
 	include/gpds/value.hpp
 )
+
+# spdlog sink
+if (GPDS_FEATURE_SPDLOG)
+	list(APPEND HEADERS_PUBLIC
+		include/gpds/spdlog_sink.hpp
+	)
+endif()
 
 # Define targets
 set(NAME gpds)

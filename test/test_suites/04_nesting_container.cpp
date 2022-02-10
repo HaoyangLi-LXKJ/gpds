@@ -1,6 +1,4 @@
-#include "../test.h"
-#include "gpds/serialize.hpp"
-#include <iostream>
+#include "../test.hpp"
 
 TEST_CASE("containers can be nested")
 {
@@ -21,5 +19,5 @@ TEST_CASE("containers can be nested")
         ->get_value<gpds::container*>("child").value()
         ->get_value<std::string>("name")
     );
-    REQUIRE(str == "John Doe");
+    REQUIRE_EQ(str, "John Doe");
 }

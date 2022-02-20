@@ -1,7 +1,16 @@
-#include "../test.h"
+#include "../test.hpp"
 
 TEST_SUITE("attributes")
 {
+    TEST_CASE("empty")
+    {
+        gpds::attributes a;
+        CHECK(a.empty());
+
+        a.add("foo", "bar");
+        CHECK_FALSE(a.empty());
+    }
+
     TEST_CASE("deserialize")
     {
 
